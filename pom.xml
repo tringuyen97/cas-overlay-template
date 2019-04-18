@@ -74,7 +74,8 @@
 
         <mainClassName>org.springframework.boot.loader.WarLauncher</mainClassName>
         <isExecutable>false</isExecutable>
-        <manifestFileToUse>${project.build.directory}/war/work/org.apereo.cas/cas-server-webapp${app.server}/META-INF/MANIFEST.MF</manifestFileToUse>
+        
+<manifestFileToUse>${project.build.directory}/war/work/org.apereo.cas/cas-server-webapp${app.server}/META-INF/MANIFEST.MF</manifestFileToUse>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -141,6 +142,32 @@
 					<groupId>org.springframework.security</groupId>
 					<artifactId>spring-security-core</artifactId>
 					<version>4.2.3.RELEASE</version>
+				</dependency>
+				<dependency>
+					<groupId>org.apereo.cas</groupId>
+					<artifactId>cas-server-support-ldap</artifactId>
+					<version>${cas.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>org.apereo.cas</groupId>
+					<artifactId>cas-server-support-pac4j-webflow</artifactId>
+					<version>${cas.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>org.apereo.cas</groupId>
+					<artifactId>cas-server-support-rest</artifactId>
+					<version>5.3.0</version>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+				   <groupId>org.apereo.cas</groupId>
+				   <artifactId>cas-server-support-jpa-service-registry</artifactId>
+				   <version>${cas.version}</version>
+				 </dependency>
+				<dependency>
+				   <groupId>org.apereo.cas</groupId>
+				   <artifactId>cas-server-support-jpa-ticket-registry</artifactId>
+				   <version>${cas.version}</version>
 				</dependency>
                 <!--
                 ...Additional dependencies may be placed here...
